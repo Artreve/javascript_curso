@@ -27,7 +27,7 @@ console.log(`El número ${base} elevado a la potencia ${exponente} es de ${Math.
 console.log(`La raiz cuadrada de 64 es ${Math.sqrt(64)}`);
 
 //Números aleatorios
-console.log(Math.ceil(Math.random() *50));
+console.log(Math.ceil(Math.random() *50+1));
 
 //Devolver 2 decimales
 console.log(Math.round(numero*100)/100);
