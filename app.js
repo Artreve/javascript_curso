@@ -63,7 +63,7 @@ function tarjetasPresentacion(){
     document.write('------TARJETA DE PRESENTACIÓN------<br />');
     document.write(`<b>Nombre:</b> ${user.last_name} ${
       user.first_name}<br />`);
-    document.write(`<b>Correo:</b> ${user.email}<br />`)
+    document.write(`<b>Correo:</b> ${user.email}`)
   })
 }
 
@@ -76,6 +76,8 @@ function agregarUsuario(){
   let avatar = prompt('Ingresa la direccion de su avatar');
 
   //evaluar los datos para que puedan cargarse 
+  
+
   data.push[{
     id: idNuevo,
     email: correo,
@@ -90,9 +92,7 @@ function agregarUsuario(){
 //pedir el nombre
 // guardar esa informacion
 const actualizarNombre = function(id){
-  let index = data.findIndex(function(user){
-    return user.id === id;
-  })//el finIndex va a recorrer cada elemento y dara su posicion 
+  let indice = validarId(id);
   if(index<0){
     return 'El id ingresado no existe'
   }
@@ -100,8 +100,30 @@ const actualizarNombre = function(id){
 
 //5- Eliminar un usuario en particular
 
+const eliminarUsuario =function(id){
+  let indice = validarId(id);
+  if(index<0){
+    return 'El id ingresado no existe'
+  }
+  let validar = confirm ('¿Está seguro que desea eliminar al usuario?')
+  if (validar){
+    data.splice(indice,1);
+    alert(`El usuario con el id: ${id}, fue eliminado`);
+  }
+  
+
+}
+
+function validarId(){
+  let index = data.findIndex(function(user){
+    return user.id === id;
+  })//el finIndex va a recorrer cada elemento y dara su posicion 
+  return index;
+}
+
 //6- Realizar búsqueda de usuarios cuyo apellido coincida con el termino a buscar
 
+//CRUD (CREATE,READ,UPDATE, DELETE)
 
 
 
