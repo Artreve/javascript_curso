@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javaScript</title>
 </head>
+<style>
+    img.dom{
+        width: 300px;
+    }
+    .fondo{
+        background-color: aqua;
+    }
+</style>
 <body>
-    <h1>Clase de JavaScript</h1>
-    
+    <h1 id="title">Clase de JavaScript</h1>
+    <h2 class="titulo_bonito">Hola Mundo!</h2>
+    <h3>redireccionando</h3>  
+    <div id="lista">
+        <ul>
+            <li>Sacar la basura</li>
+            <li>Pasear al perro</li>
+            <li>Estudiar Inglés</li>
+        </ul> 
+    </div>
+    <button onclick="alert('Hola Chicxs')">ClickMe!</button>
+    <button onclick="mostrarMensaje()">ClickMe Now!</button>
+    <button onclick="saludar('Juan')">Saludar</button>
     <script src="/app.js"></script>
+
+    <input type="text" id="campo" onclick="cambiarColor()" onblur="quitarColor()" />
     <script>
         // //código de js
         // alert('Bienvenidos a JS');
