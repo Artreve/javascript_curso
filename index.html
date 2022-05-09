@@ -30,7 +30,21 @@
     <button onclick="saludar('Juan')">Saludar</button>
     <script src="/app.js"></script>
 
-    <input type="text" id="campo" onclick="cambiarColor()" onblur="quitarColor()" />
+    <br />
+    <br />
+    <input
+      id="campo"
+      type="text"
+      onclick="cambiarColor()"
+      onblur="quitarColor()"
+      onchange="cambioInput(event)"
+      name="campo_texto"
+      value="hola mundo"
+    />
+    <br />
+    <br />
+    <input type="text" id="text_nombre" placeholder="Ingresa tu nombre..." />
+    <button onclick="inputSaludar()">Mostrar</button>
     <script>
         // //código de js
         // alert('Bienvenidos a JS');
